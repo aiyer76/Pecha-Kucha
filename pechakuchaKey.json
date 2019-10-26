@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "flash-student-257022",
+  "private_key_id": "ce18a6af6c7c5d835629deaaab93b78ef4a62fb9",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDO04S1g9ofIsTk\npdfuXhkAiJ78J7W8RY2ycbOKjl8lMyOYt9Mei9CcqFQrJ/ZshZnvqo6rS9eUk3sl\nmwShFYglnKtMEHlSXQDgBp1EDf7aV8+uS3LYsSwXN4zFemZFHsyh8V4NCQMj9aPt\nI2xP8YfhJFX1q98E3YUfSe/Q3kka8P4vpM+AiA7UTV9+r8kOqUicnN9xK63y+au6\nGYj7lhSUFxQR0q7G12aw8c2vZNwIiD40dUnnQGtvtHLiR0/LDVpJ4F+/o3QqFEXl\n++G3kMeQ+Gn95nTYKwIUdH5+EWk/JkUJpa33+70yC81GL2uFCx79oXMpK1s/rHdw\nHj3eSa9lAgMBAAECggEAAcbZZgHK9ueCj4BJOZf/WPzTeNESg5qJXBYT98W/VX95\n987kdme3FBFyH6jJOidvqhpp/Vi6cmFN9oW9ZXDc6Y3N/upJUIbSAhqscTA5l0CX\n3SRyyR/EhDKK+AtUI5XfJij/qNcB+uYaUWgzfwBRLYL1ZhXi5ZTNlvY4pC+0qxGQ\n9BxMO4tD3p/2YHz2HeYssllGal2epPniBuF8yEcCiNr4B3hvpyC2TqbbeBXmZYt1\nq9p3FxB+Xv/jE+YQo8b9YTBWduWudvgtkutPLLp+1XwivDm6mtuBG/POPoQ7YBCy\nWbaYwTqrrixc2iKsRSii7kTljgEa/3IQnvV9w9shpQKBgQD+vOTmVD02bDiGtnCj\nPOVvs2tafR7ThQyJgr+Nr7Iy+qLiWceqKmaX1ZXf23HJrycqf3WqCA0vaNAExtUE\n/iHUs2F+hw8DaVo4Oz9hZb6EDE+HGLiqv9A9/rHZeS8YFHcaBOoA6E3CAJHFIhFK\nvCYSi4qGKmI7yAadYLEiwKiNPwKBgQDP2dqVH8n5pnPhN378gSY/b8yufrhF7Iy8\nA7xZ+4BizCbyUJzsQVVT66da+8u/Y+ceBd/SGoBWLPhm7ekuOcNvrkTVvxtS5qFA\njMdfG9x3XR0w8MpJJX3LJxPyoKHMQddyrP+rUlP9iauVVBPwqY/6TOHOHsUHknJw\njrFv/PAGWwKBgQCCKGYUwgoc2qLvQhy/a4gX0OcTb0bm8N59DI9vh8xXe/TqDtGU\nQuH0xq8zmF7FnHc4obOvUznZdYaESkvhpzAGDDnOepfTOGteu/cgfuofcmLYNmt0\n41k1tAOPiPnlJd/NLaGbIRdJ/xx8S3Hma8hQRXhcIR/cR9IJa7RWe3Yj5QKBgQCg\nfAtj3RmsIzOSD7GC8Y1AqegWS02o386CVTgXGjO1FQB1VHz1hjSGCYw8mfJlopOP\nAOYiacfxweNCRiwnPv6BusL3bwl/5wdWudwuuWpu13x0j1cBR2trco7aZeDHv4bE\nyoLWG0kymBvdvv9ucN30W2x2JBfpks+9zM+AMoJ5xQKBgCaLwLiWsFjzYzU84Q0s\n7W1VF4AJPU37CtcIH7JC31OxvM1nM1ancwudvJYMluOeo/s/sho5Eljj+BIj8J/u\nbN9v4sE1fF0uz/0TnQCAUwRkxaHNfIAGwuuf+QqA+RAYsxkpT4O43q/TiImoJncY\nkjJheO32GjJC2LX3joNBT0ji\n-----END PRIVATE KEY-----\n",
+  "client_email": "pechakucha@flash-student-257022.iam.gserviceaccount.com",
+  "client_id": "102241249367758625525",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/pechakucha%40flash-student-257022.iam.gserviceaccount.com"
+}
