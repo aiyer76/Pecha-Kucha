@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Pecha-Kucha</string>
+    <string name="action_settings">Settings</string>
+    <string name="what_can_i_help_you_with_today">What can I help you with today?</string>
+</resources>
