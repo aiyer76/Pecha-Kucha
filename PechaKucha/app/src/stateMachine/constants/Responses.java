@@ -1,4 +1,4 @@
-package com.hackathon.stateMachine.constants;
+package stateMachine.constants;
 
 import java.util.Random;
 

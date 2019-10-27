@@ -1,4 +1,4 @@
-package com.hackathon.stateMachine.responses;
+package stateMachine.responses;
 
 public interface ResponseGenerator {
     String getResponse(String sentiment);

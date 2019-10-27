@@ -1,4 +1,4 @@
-package com.hackathon.stateMachine.nlp;
+package stateMachine.nlp;
 
 public interface SentimentIdentifier {
 

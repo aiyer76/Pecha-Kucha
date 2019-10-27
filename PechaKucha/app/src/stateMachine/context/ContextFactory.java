@@ -1,11 +1,11 @@
-package com.hackathon.stateMachine.context;
+package stateMachine.context;
 
-import com.hackathon.stateMachine.androidAppDummy.AndroidChatApp;
-import com.hackathon.stateMachine.constants.Responses;
-import com.hackathon.stateMachine.nlp.SentimentIdentifier;
-import com.hackathon.stateMachine.nlp.SubjectIdentifier;
-import com.hackathon.stateMachine.responses.ResponseGenerator;
-import com.hackathon.stateMachine.web.WebQuery;
+import stateMachine.androidAppDummy.AndroidChatApp;
+import stateMachine.constants.Responses;
+import stateMachine.nlp.SentimentIdentifier;
+import stateMachine.nlp.SubjectIdentifier;
+import stateMachine.responses.ResponseGenerator;
+import stateMachine.web.WebQuery;
 
 import java.net.URL;
 

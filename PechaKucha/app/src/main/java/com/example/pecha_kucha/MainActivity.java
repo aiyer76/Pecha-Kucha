@@ -11,6 +11,7 @@ import android.widget.EditText;
 import android.widget.ListView;
 import com.fasterxml.jackson.databind.*;
 import com.fasterxml.jackson.core.*;
+import stateMachine.StateMachine;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -25,6 +26,7 @@ public class MainActivity extends AppCompatActivity implements RoomListener {
     private Scaledrone scaledrone;
     private MessageAdapter messageAdapter;
     private ListView messagesView;
+    private StateMachine stateMachine = new StateMachine();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -92,7 +94,7 @@ public class MainActivity extends AppCompatActivity implements RoomListener {
             final MemberData data = mapper.treeToValue(receivedMessage.getMember().getClientData(), MemberData.class);
             boolean belongsToCurrentUser = receivedMessage.getClientID().equals(scaledrone.getClientID());
             final Message message = new Message(receivedMessage.getData().asText(), data, belongsToCurrentUser);
-            final Message message2 = new Message(receivedMessage.getData().asText(), data, !belongsToCurrentUser);
+            final Message message2 = new Message(stateMachine.state(message.getText()), data, !belongsToCurrentUser);
             runOnUiThread(new Runnable() {
                 @Override
                 public void run() {

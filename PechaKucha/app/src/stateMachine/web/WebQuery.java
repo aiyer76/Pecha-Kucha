@@ -1,4 +1,4 @@
-package com.hackathon.stateMachine.web;
+package stateMachine.web;
 
 import java.net.URL;
 

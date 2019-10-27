@@ -1,4 +1,4 @@
-package com.hackathon.stateMachine.androidAppDummy;
+package stateMachine.androidAppDummy;
 
 public interface AndroidChatApp {
      String getContent();
