@@ -1,17 +1,21 @@
 package com.hackathon.stateMachine.constants;
 
+import java.util.Random;
+
 public class Responses {
+    private static final Random random = new Random();
+
     private static final String greeting = "Welcome to MyCustomChatBot!";
     private static final String moreInfo = "Please tell me more.";
     private static final String presentLink1 = "I found some information on ";
     private static final String presentLink2 = " at the following link: ";
-    private static final String sympathy1 = "I'm sorry you're feeling bad.";
-    private static final String sympathy2 = "I'm sorry you're upset.";
-    private static final String sympathy3 = "That sounds rough.";
-    private static final String sympathy4 = "That's not any fun.";
-    private static final String sympathy5 = "I'd be frustrated too.";
-    private static final String sympathy6 = "Sorry :(";
-    private static final String sympathy7 = "That sucks :/";
+
+    public static final String[] angerResponseArray = new String[]{"Sorry that you're feeling frustrated.",
+            "Sounds like you have a right to be angry.","That does sound frustrating.",
+            "Sounds like a rough situation.","That's a tough one."};
+
+    public static final String[] fearResponseArray = new String[]{"That sounds scary", "Yikes",
+            "I can see why you would be apprehensive", "Sounds like a scary situation to me"};
 
     public static String getGreeting() {
         return greeting;
@@ -29,32 +33,9 @@ public class Responses {
         return presentLink2;
     }
 
-    public static String getSympathy1() {
-        return sympathy1;
+    public static String getAngerResponse(){
+        return angerResponseArray[random.nextInt(angerResponseArray.length)];
     }
 
-    public static String getSympathy2() {
-        return sympathy2;
-    }
-
-    public static String getSympathy3() {
-        return sympathy3;
-    }
-
-    public static String getSympathy4() {
-        return sympathy4;
-    }
-
-    public static String getSympathy5() {
-        return sympathy5;
-    }
-
-    public static String getSympathy6() {
-        return sympathy6;
-    }
-
-    public static String getSympathy7() {
-        return sympathy7;
-    }
 
 }
