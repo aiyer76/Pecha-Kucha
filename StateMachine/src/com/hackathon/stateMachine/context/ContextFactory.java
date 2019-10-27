@@ -24,8 +24,9 @@ public class ContextFactory implements ContextFactoryFramework{
     public WebQuery buildWebQuery() {
         return new WebQuery() {
             @Override
-            public URL getURL(String sentiment) {
-                return null;
+            public URL getURL(String subject) {
+                String baseURL = "https://en.wikipedia.org/wiki/";
+                return new URL(baseURL + subject);
             }
         };
     }
