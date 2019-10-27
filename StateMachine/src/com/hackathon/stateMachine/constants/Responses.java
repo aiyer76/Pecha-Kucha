@@ -10,23 +10,26 @@ public class Responses {
     private static final String presentLink1 = "I found some information on ";
     private static final String presentLink2 = " at the following link: ";
 
-    public static final String[] angerResponseArray = new String[]{"Sorry that you're feeling frustrated.",
+
+    private static final String defaultResponse = "I'm not sure what to make of that.";
+
+    private static final String[] angerResponseArray = new String[]{"Sorry that you're feeling frustrated.",
             "Sounds like you have a right to be angry.","That does sound frustrating.",
             "Sounds like a rough situation.","That's a tough one."};
 
-    public static final String[] fearResponseArray = new String[]{"That sounds scary", "Yikes",
+    private static final String[] fearResponseArray = new String[]{"That sounds scary", "Yikes",
             "I can see why you would be apprehensive", "Sounds like a scary situation to me"};
 
-    public static final String[] shameResponseArray = new String[]{"That sounds a little embarrassing",
+    private static final String[] shameResponseArray = new String[]{"That sounds a little embarrassing",
             "Embarrassment can be a powerful emotion", "Sound's like you're having a very emotional experience"};
 
-    public static final String[] supriseResponseArray = new String[]{"Wow! That's very surprising",
+    private static final String[] surpriseResponseArray = new String[]{"Wow! That's very surprising",
             "Sounds like you're a little surprised", "Wow!"};
 
-    public static final String[] calmnessResponseArray = new String[]{"Sounds like you've got everything under control",
+    private static final String[] calmnessResponseArray = new String[]{"Sounds like you've got everything under control",
             "Interesting....", "You seem pretty calm about this."};
 
-    public static final String[] agitationResponseArray = new String[]{"Sounds like a stressful situation, but I trust you'll make the right decision",
+    private static final String[] agitationResponseArray = new String[]{"Sounds like a stressful situation, but I trust you'll make the right decision",
             "Hmm, I would be stressed too."};
 
     public static String getGreeting() {
@@ -57,7 +60,7 @@ public class Responses {
         return shameResponseArray[random.nextInt(shameResponseArray.length)];
     }
     public static String getSupriseResponse() {
-        return supriseResponseArray[random.nextInt(supriseResponseArray.length)];
+        return surpriseResponseArray[random.nextInt(surpriseResponseArray.length)];
     }
 
     public static String getCalmnessResponse() {
@@ -67,4 +70,9 @@ public class Responses {
     public static String getAgitationResponse() {
         return agitationResponseArray[random.nextInt(agitationResponseArray.length)];
     }
+
+    public static String getDefaultResponse() {
+        return defaultResponse;
+    }
+
 }

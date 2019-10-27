@@ -1,6 +1,7 @@
 package com.hackathon.stateMachine.context;
 
 import com.hackathon.stateMachine.androidAppDummy.AndroidChatApp;
+import com.hackathon.stateMachine.constants.Responses;
 import com.hackathon.stateMachine.nlp.SentimentIdentifier;
 import com.hackathon.stateMachine.nlp.SubjectIdentifier;
 import com.hackathon.stateMachine.responses.ResponseGenerator;
@@ -42,6 +43,19 @@ public class ContextFactory implements ContextFactoryFramework{
 
     @Override
     public ResponseGenerator buildResponseGenerator() {
-        return null;
+        return new ResponseGenerator() {
+            @Override
+            public String getResponse(String sentiment) {
+                switch(sentiment.toLowerCase()){
+                    case "anger": return Responses.getAngerResponse();
+                    case "fear": return Responses.getFearResponse();
+                    case "shame": return Responses.getShameResponse();
+                    case "surprise": return Responses.getSupriseResponse();
+                    case "calmness": return Responses.getCalmnessResponse();
+                    case "agitation": return Responses.getAgitationResponse();
+                    default: return Responses.getDefaultResponse();
+                }
+            }
+        };
     }
 }
