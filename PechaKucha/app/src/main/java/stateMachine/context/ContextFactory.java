@@ -44,14 +44,8 @@ public class ContextFactory implements ContextFactoryFramework{
             switch(sentiment.toLowerCase()){
                 case "anger": return Responses.getAngerResponse();
                 case "fear": return Responses.getFearResponse();
-                case "shame": return Responses.getShameResponse();
-                case "surprise": return Responses.getSurpriseResponse();
-                case "calmness": return Responses.getCalmnessResponse();
-                case "agitation": return Responses.getAgitationResponse();
-                case "dislike": return Responses.getDislikeResponse();
-                case "like": return Responses.getLikeResponse();
-                case "sure": return Responses.getSureResponse();
-                case "unsure": return Responses.getUnsureResponse();
+                case "excited": return Responses.getExcitedResponse();
+                case "bored": return Responses.getBoredResponse();
                 case "happy": return Responses.getHappyResponse();
                 case "sad": return Responses.getSadResponse();
                 default: return Responses.getDefaultResponse();
