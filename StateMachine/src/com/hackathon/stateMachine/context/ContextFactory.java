@@ -1,6 +1,7 @@
 package com.hackathon.stateMachine.context;
 
 import com.hackathon.stateMachine.androidAppDummy.AndroidChatApp;
+import com.hackathon.stateMachine.constants.Responses;
 import com.hackathon.stateMachine.nlp.SentimentIdentifier;
 import com.hackathon.stateMachine.nlp.SubjectIdentifier;
 import com.hackathon.stateMachine.responses.ResponseGenerator;
@@ -22,11 +23,12 @@ public class ContextFactory implements ContextFactoryFramework{
 
     @Override
     public WebQuery buildWebQuery() {
-        return new WebQuery() {
-            @Override
-            public URL getURL(String subject) {
-                String baseURL = "https://en.wikipedia.org/wiki/";
+        return subject -> {
+            String baseURL = "https://en.wikipedia.org/wiki/";
+            try {
                 return new URL(baseURL + subject);
+            } catch(Exception e) {
+                return null;
             }
         };
     }
@@ -38,6 +40,16 @@ public class ContextFactory implements ContextFactoryFramework{
 
     @Override
     public ResponseGenerator buildResponseGenerator() {
-        return null;
+        return sentiment -> {
+            switch(sentiment.toLowerCase()){
+                case "anger": return Responses.getAngerResponse();
+                case "fear": return Responses.getFearResponse();
+                case "shame": return Responses.getShameResponse();
+                case "surprise": return Responses.getSupriseResponse();
+                case "calmness": return Responses.getCalmnessResponse();
+                case "agitation": return Responses.getAgitationResponse();
+                default: return Responses.getDefaultResponse();
+            }
+        };
     }
 }
