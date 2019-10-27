@@ -45,7 +45,7 @@ public class ContextFactory implements ContextFactoryFramework{
                 case "anger": return Responses.getAngerResponse();
                 case "fear": return Responses.getFearResponse();
                 case "shame": return Responses.getShameResponse();
-                case "surprise": return Responses.getSupriseResponse();
+                case "surprise": return Responses.getSurpriseResponse();
                 case "calmness": return Responses.getCalmnessResponse();
                 case "agitation": return Responses.getAgitationResponse();
                 case "dislike": return Responses.getDislikeResponse();

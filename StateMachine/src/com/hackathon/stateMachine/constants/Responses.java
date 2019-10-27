@@ -75,7 +75,7 @@ public class Responses {
     public static String getShameResponse(){
         return shameResponseArray[random.nextInt(shameResponseArray.length)];
     }
-    public static String getSupriseResponse() {
+    public static String getSurpriseResponse() {
         return surpriseResponseArray[random.nextInt(surpriseResponseArray.length)];
     }
 
