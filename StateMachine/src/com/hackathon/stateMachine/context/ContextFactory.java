@@ -26,7 +26,11 @@ public class ContextFactory implements ContextFactoryFramework{
             @Override
             public URL getURL(String subject) {
                 String baseURL = "https://en.wikipedia.org/wiki/";
-                return new URL(baseURL + subject);
+                try {
+                    return new URL(baseURL + subject);
+                } catch(Exception e) {
+                    return null;
+                }
             }
         };
     }
