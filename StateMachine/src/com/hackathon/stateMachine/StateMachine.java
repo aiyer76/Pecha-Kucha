@@ -23,6 +23,8 @@ public class StateMachine {
     private String sentiment;
 
     public void state() {
+
+
         while (true) {
             switch (currentState) {
                 case 0:{
@@ -50,13 +52,13 @@ public class StateMachine {
                     URL url = webQuery.getURL(subject);
                     app.setMessage(Responses.getPresentLink1() + sentiment + Responses.getPresentLink2() + url);
                     currentState = 6;
-                    break;
+                    return;
                 }
 
                 case 4: {
                     app.setMessage(responseGenerator.getResponse(sentiment));
                     currentState = 1;
-                    break;
+                    return;
                 }
                 case 6: {
                     app = builder.buildAndroidChatApp();
