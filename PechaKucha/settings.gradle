@@ -1,2 +1,2 @@
-include ':app'
+include ':app', ':okhttp-3.10.0', ':okio-1.14.0', ':paralleldots-1.0.2'
 rootProject.name='Pecha-Kucha'

@@ -106,7 +106,7 @@ public class MainActivity extends AppCompatActivity implements RoomListener {
             });
         } catch (JsonProcessingException e) {
             e.printStackTrace();
-        }
+        } catch (Exception e) { }
     }
 
     private String getRandomName() {

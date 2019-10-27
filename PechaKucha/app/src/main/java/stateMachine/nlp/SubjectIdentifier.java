@@ -1,6 +1,6 @@
 package stateMachine.nlp;
 
 public interface SubjectIdentifier {
-    boolean hasSubject(String content);
+    boolean hasSubject(String content) throws Exception;
     String getSubject();
 }

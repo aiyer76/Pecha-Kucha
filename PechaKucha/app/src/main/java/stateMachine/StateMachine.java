@@ -22,7 +22,7 @@ public class StateMachine {
     private String subject;
     private String sentiment;
 
-    public String state(String input) {
+    public String state(String input) throws Exception {
 
         content = input;
         while (true) {
