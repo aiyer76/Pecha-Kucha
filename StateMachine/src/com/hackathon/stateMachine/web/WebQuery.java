@@ -4,5 +4,5 @@ import java.net.URL;
 
 public interface WebQuery {
 
-    URL getURL(String sentiment);
+    URL getURL(String subject);
 }

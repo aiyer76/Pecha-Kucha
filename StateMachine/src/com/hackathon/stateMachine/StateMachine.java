@@ -2,7 +2,7 @@ package com.hackathon.stateMachine;
 
 import com.hackathon.stateMachine.androidAppDummy.AndroidChatApp;
 import com.hackathon.stateMachine.constants.Responses;
-import com.hackathon.stateMachine.context.ContextFactory;
+import com.hackathon.stateMachine.context.ContextFactoryFramework;
 import com.hackathon.stateMachine.nlp.SentimentIdentifier;
 import com.hackathon.stateMachine.nlp.SubjectIdentifier;
 import com.hackathon.stateMachine.responses.ResponseGenerator;
@@ -11,7 +11,7 @@ import com.hackathon.stateMachine.web.WebQuery;
 import java.net.URL;
 
 public class StateMachine {
-    private static final ContextFactory builder = null;
+    private static final ContextFactoryFramework builder = null;
     private int currentState = 0;
     private AndroidChatApp app = builder.buildAndroidChatApp();
     private SubjectIdentifier subjectIdentifier = builder.buildSubjectIdentifier();
@@ -47,7 +47,7 @@ public class StateMachine {
                 }
 
                 case 3: {
-                    URL url = webQuery.getURL(sentiment);
+                    URL url = webQuery.getURL(subject);
                     app.setMessage(Responses.getPresentLink1() + sentiment + Responses.getPresentLink2() + url);
                     currentState = 6;
                     break;
@@ -64,6 +64,7 @@ public class StateMachine {
                     sentimentIdentifier = builder.buildSentimentIdentifier();
                     webQuery = builder.buildWebQuery();
                     responseGenerator = builder.buildResponseGenerator();
+
                     currentState = 1;
                     break;
                 }

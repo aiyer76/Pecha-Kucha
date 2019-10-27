@@ -6,11 +6,37 @@ import com.hackathon.stateMachine.nlp.SubjectIdentifier;
 import com.hackathon.stateMachine.responses.ResponseGenerator;
 import com.hackathon.stateMachine.web.WebQuery;
 
-public interface ContextFactory {
-    SentimentIdentifier buildSentimentIdentifier();
-    SubjectIdentifier buildSubjectIdentifier();
-    WebQuery buildWebQuery();
-    AndroidChatApp buildAndroidChatApp();
-    ResponseGenerator buildResponseGenerator();
+import java.net.URL;
 
+public class ContextFactory implements ContextFactoryFramework{
+
+    @Override
+    public SentimentIdentifier buildSentimentIdentifier() {
+        return null;
+    }
+
+    @Override
+    public SubjectIdentifier buildSubjectIdentifier() {
+        return null;
+    }
+
+    @Override
+    public WebQuery buildWebQuery() {
+        return new WebQuery() {
+            @Override
+            public URL getURL(String sentiment) {
+                return null;
+            }
+        };
+    }
+
+    @Override
+    public AndroidChatApp buildAndroidChatApp() {
+        return null;
+    }
+
+    @Override
+    public ResponseGenerator buildResponseGenerator() {
+        return null;
+    }
 }

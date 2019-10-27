@@ -5,6 +5,13 @@ public class Responses {
     private static final String moreInfo = "Please tell me more.";
     private static final String presentLink1 = "I found some information on ";
     private static final String presentLink2 = " at the following link: ";
+    private static final String sympathy1 = "I'm sorry you're feeling bad.";
+    private static final String sympathy2 = "I'm sorry you're upset.";
+    private static final String sympathy3 = "That sounds rough.";
+    private static final String sympathy4 = "That's not any fun.";
+    private static final String sympathy5 = "I'd be frustrated too.";
+    private static final String sympathy6 = "Sorry :(";
+    private static final String sympathy7 = "That sucks :/";
 
     public static String getGreeting() {
         return greeting;
@@ -50,11 +57,4 @@ public class Responses {
         return sympathy7;
     }
 
-    private static final String sympathy1 = "I'm sorry you're feeling bad.";
-    private static final String sympathy2 = "I'm sorry you're upset.";
-    private static final String sympathy3 = "That sounds rough.";
-    private static final String sympathy4 = "That's not any fun.";
-    private static final String sympathy5 = "I'd be frustrated too.";
-    private static final String sympathy6 = "Sorry :(";
-    private static final String sympathy7 = "That sucks :/";
 }
