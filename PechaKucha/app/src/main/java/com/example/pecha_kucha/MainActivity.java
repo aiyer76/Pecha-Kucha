@@ -38,6 +38,7 @@ public class MainActivity extends AppCompatActivity implements RoomListener {
         messagesView = (ListView) findViewById(R.id.messages_view);
         messagesView.setAdapter(messageAdapter);
 
+
         MemberData data = new MemberData(getRandomName(), getRandomColor());
 
         scaledrone = new Scaledrone(channelID, data);
@@ -83,6 +84,7 @@ public class MainActivity extends AppCompatActivity implements RoomListener {
         System.err.println(ex);
     }
 
+    //This is the method to implement the return message. Use message 2 for the return message
     @Override
     public void onMessage(Room room, com.scaledrone.lib.Message receivedMessage) {
         final ObjectMapper mapper = new ObjectMapper();
@@ -90,10 +92,13 @@ public class MainActivity extends AppCompatActivity implements RoomListener {
             final MemberData data = mapper.treeToValue(receivedMessage.getMember().getClientData(), MemberData.class);
             boolean belongsToCurrentUser = receivedMessage.getClientID().equals(scaledrone.getClientID());
             final Message message = new Message(receivedMessage.getData().asText(), data, belongsToCurrentUser);
+            final Message message2 = new Message(receivedMessage.getData().asText(), data, !belongsToCurrentUser);
             runOnUiThread(new Runnable() {
                 @Override
                 public void run() {
                     messageAdapter.add(message);
+                    messagesView.setSelection(messagesView.getCount() - 1);
+                    messageAdapter.add(message2);
                     messagesView.setSelection(messagesView.getCount() - 1);
                 }
             });

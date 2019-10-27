@@ -22,4 +22,8 @@ public class Message {
     public boolean isBelongsToCurrentUser() {
         return belongsToCurrentUser;
     }
+
+    public void setIsBelongsToCurrentUser(boolean belongsToCurrentUser) {
+        this.belongsToCurrentUser = belongsToCurrentUser;
+    }
 }
