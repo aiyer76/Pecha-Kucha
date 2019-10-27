@@ -48,6 +48,12 @@ public class ContextFactory implements ContextFactoryFramework{
                 case "surprise": return Responses.getSupriseResponse();
                 case "calmness": return Responses.getCalmnessResponse();
                 case "agitation": return Responses.getAgitationResponse();
+                case "dislike": return Responses.getDislikeResponse();
+                case "like": return Responses.getLikeResponse();
+                case "sure": return Responses.getSureResponse();
+                case "unsure": return Responses.getUnsureResponse();
+                case "happy": return Responses.getHappyResponse();
+                case "sad": return Responses.getSadResponse();
                 default: return Responses.getDefaultResponse();
             }
         };
