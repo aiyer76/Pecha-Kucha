@@ -14,12 +14,17 @@ count = 0
 
 
 def getNLP(text, entities = {}):
+
+	print('\n\nSTATEMENT:')
+	print(text)
+
 	global client
 	global count
 	count += 1
 	
 	emotionResponse = paralleldots.emotion(text)
 	emotions = emotionResponse['emotion']
+	print('\nEMOTIONS:')
 	print(emotions)
 	maxEmotion = ''
 	maxEmotionMag = 0
@@ -27,6 +32,7 @@ def getNLP(text, entities = {}):
 		if maxEmotionMag < emotions[emotion]:
 			maxEmotionMag = emotions[emotion]
 			maxEmotion = emotion
+	print('\nWINNING EMOTION')
 	print(maxEmotion)
 	
 	# The text to analyze
@@ -49,10 +55,14 @@ def getNLP(text, entities = {}):
 			entities[name] = salience
 		if (entities[name] >= 1) and (count >= 3):
 			highest = max(entities[name], highest)
+			print('\nSUBJECT')
 			print(name)
+	print('\nENTITIES')
 	print(entities)
-
+'''
 getNLP('I just failed my tests, I fel miserable right now')
 getNLP('I am concerned about losing financial aid')
 getNLP('My professor is is so inconsiderate, they put all their tests on the same day')
 getNLP('There no support for me')
+'''
+getNLP('THe quick brown fox jumps over the lazy dog')
